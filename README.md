@@ -1,10 +1,9 @@
-# 知识库
-
 收集和整理公开文件的资料和信息，希望能够为大家的工作提供帮助
 
-## [解决方案库](https://docs.qq.com/doc/DQ2NyZUVLa1dFUVNi)
+## 解决方案库
 
-- 操作系统中相关问题的解决方案
+- [操作系统中相关问题的解决方案](https://docs.qq.com/doc/DQ2NyZUVLa1dFUVNi)
+- [CentOS停服应对解决方案](https://www.kylinos.cn/support/document/53.html)
 
 ## 基础知识库
 
