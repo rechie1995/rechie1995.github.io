@@ -2,12 +2,12 @@
 
 ## 解决方案库
 
-- [操作系统中相关问题的解决方案](https://docs.qq.com/doc/DQ2NyZUVLa1dFUVNi)
+- 操作系统中相关问题的解决方案
 
 ### CentOS 停服问题
 
-  - [CentOS停服应对解决方案](https://www.kylinos.cn/support/document/53.html)
-  - [CentOS服务器操作系统停服应对实践指南](https://docs.qq.com/pdf/DUU9CTk94ZkZjSHlE)
+- [CentOS停服应对解决方案](https://www.kylinos.cn/support/document/53.html)
+- [CentOS服务器操作系统停服应对实践指南](https://docs.qq.com/pdf/DUU9CTk94ZkZjSHlE)
   
 ### 制作启动U盘工具
 
