@@ -53,3 +53,24 @@ Linux内核是Linux操作系统的主要组件，也是计算机硬件与其进�
 - CREDITS ---- Linux主要的贡献者名单。
 - REPORTING-BUGS ---- Bug上报的指南。
 - Documentation, README ---- 帮助、说明文档。
+
+## 内核配置
+
+- `make config`       纯文本界面。
+- `make menuconfig`   基于文本的彩色菜单、选项列表和对话框。
+- `make nconfig`      增强的基于文本的彩色菜单。
+- `make xconfig`      基于Qt的配置工具。
+- `make gconfig`      基于GTK+的配置工具。
+- `make oldconfig`    基于现有的 ./.config 文件选择所有选项，并询问新配置选项。
+- `make olddefconfig` 类似上一个，但不询问直接将新选项设置为默认值。
+- `make defconfig`    根据体系架构，使用arch/$arch/defconfig或arch/$arch/configs/${PLATFORM}_defconfig中的默认选项值创建./.config文件。
+- `make ${PLATFORM}_defconfig` 使用arch/$arch/configs/${PLATFORM}_defconfig中的默认选项值创建一个./.config文件。用`make help`来获取您体系架构中所有可用平台的列表。
+- `make allyesconfig` 通过尽可能将选项值设置为“y”，创建一个./.config文件。
+- `make allmodconfig` 通过尽可能将选项值设置为“m”，创建一个./.config文件。
+- `make allnoconfig`  通过尽可能将选项值设置为“n”，创建一个./.config文件。
+- `make randconfig`   通过随机设置选项值来创建./.config文件。
+- `make localmodconfig` 基于当前配置和加载的模块（lsmod）创建配置。禁用已加载的模块不需要的任何模块选项。
+- `make localyesconfig` 与localmodconfig类似，只是它会将所有模块选项转换为内置（=y）。你可以同时通过LMC_KEEP保留模块。
+- `make kvm_guest.config` 为kvm客户机内核支持启用其他选项。
+- `make xen.config`   为xen dom0客户机内核支持启用其他选项。
+- `make tinyconfig`   配置尽可能小的内核。
