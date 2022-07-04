@@ -7,7 +7,6 @@ apt 命令执行需要root权限。
 ## apt 常用命令
 
 - apt update 列出所有可更新的软件清单
-- apt update <package_name> 更新指定的软件包
 - apt upgrade 升级软件包
 - apt full-upgrade 升级软件包，升级前先删除需要更新软件包
 - apt install <package_name> 安装指定的软件包
