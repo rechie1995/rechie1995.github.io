@@ -25,6 +25,8 @@
 
 ### 操作系统概述
 
+操作系统=对象+API
+
 - [2022 南京大学拔尖计划《操作系统：设计与实现》](https://www.bilibili.com/video/BV1Cm4y1d7Ur?share_source=copy_web)
 
 ## [政策](政策/README.md)
