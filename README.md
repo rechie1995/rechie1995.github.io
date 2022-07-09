@@ -29,6 +29,10 @@
 
 - [2022 南京大学拔尖计划《操作系统：设计与实现》](https://www.bilibili.com/video/BV1Cm4y1d7Ur?share_source=copy_web)
 
+## POSIX 标准
+
+- [https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html](https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html)
+
 ## [政策](政策/README.md)
 
 主要归类来自各级政府的相关政策
