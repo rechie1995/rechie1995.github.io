@@ -1,3 +1,5 @@
+# 资料库
+
 收集和整理公开文件的资料和信息，希望能够为大家的工作提供帮助
 
 ## 解决方案库
@@ -29,9 +31,13 @@
 
 - [2022 南京大学拔尖计划《操作系统：设计与实现》](https://www.bilibili.com/video/BV1Cm4y1d7Ur?share_source=copy_web)
 
-## POSIX 标准
+### POSIX 标准
 
 - [https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html](https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html)
+
+### 操作系统革命
+
+[【1080P重制】操作系统革命 Revolution OS](https://www.bilibili.com/video/BV1iC4y187nT?share_source=copy_web)
 
 ## [政策](政策/README.md)
 
