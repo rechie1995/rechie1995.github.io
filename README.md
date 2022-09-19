@@ -1,24 +1,21 @@
 # 资料库
 
-收集和整理公开文件的资料和信息，希望能够为大家的工作提供帮助
+收集和整理公开文件的资料和信息，希望能够为大家的工作提供帮助。
 
-## 解决方案库
+## 解决方案
 
-- 操作系统中相关问题的解决方案
+操作系统中相关问题的解决方案。
 
-### CentOS 停服问题
+- [CentOS停服问题](解决方案/CentOS停服问题/README.md)
+- 操作系统安全加固
+- 如何制作系统启动盘
+- 制作启动U盘工具
+  - [Ventoy](https://www.ventoy.net/cn/index.html)
+  - [Rufus](http://rufus.ie/zh/)
+  - [UltraISO](https://cn.ultraiso.net/)
+  - [dd](https://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html#dd-invocation)
 
-- [CentOS停服应对解决方案](https://www.kylinos.cn/support/document/53.html)
-- [CentOS服务器操作系统停服应对实践指南](https://docs.qq.com/pdf/DUU9CTk94ZkZjSHlE)
-  
-### 制作启动U盘工具
-
-- [Ventoy](https://www.ventoy.net/cn/index.html)
-- [Rufus](http://rufus.ie/zh/)
-- [UltraISO](https://cn.ultraiso.net/)
-- [dd](https://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html#dd-invocation)
-
-## 基础知识库
+## 基础知识
 
 ### 信息技术应用创新
 
@@ -37,7 +34,7 @@
 
 ### 操作系统革命
 
-[【1080P重制】操作系统革命 Revolution OS](https://www.bilibili.com/video/BV1iC4y187nT?share_source=copy_web)
+- [【1080P重制】操作系统革命 Revolution OS](https://www.bilibili.com/video/BV1iC4y187nT?share_source=copy_web)
 
 ## [政策](政策/README.md)
 
@@ -45,7 +42,7 @@
 
 ---
 
-通过[ISSUE](https://gitee.com/kylinos_fj/doc/issues)向我们反馈系统问题。
+通过[ISSUE](https://gitee.com/kylinos_fj/doc/issues)向我们反馈问题。
 
 或[PR](https://gitee.com/kylinos_fj/doc/pulls)向我们提交您认为合适的解决方案。
 

@@ -1,6 +1,5 @@
 # Linux下使用dd制作启动U盘
 
-
 1、  找到U盘
 
 `sudo fdisk -l`
