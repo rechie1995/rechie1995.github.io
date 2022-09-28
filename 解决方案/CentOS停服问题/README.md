@@ -8,6 +8,8 @@
 
 CentOS Stream 是一个滚动升级版本，不再是Red Hat Enterprise Linux的复刻版本，对于系统的稳定性和兼容性可能无法得到保障，其在生产环境上的使用存在的风险未知。
 
+> [CentOS 官方停服公告](https://blog.centos.org/2020/12/future-is-centos-stream/)
+
 ## 中国软件评测中心 CentOS 停服应对实践指南
 
 - [CentOS 服务器操作系统停服应对实践指南](https://docs.qq.com/pdf/DUU9CTk94ZkZjSHlE?)
