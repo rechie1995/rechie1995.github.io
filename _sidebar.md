@@ -1,6 +1,7 @@
 - [首页](README.md)
 - 解决方案
   - [CentOS停服问题](解决方案/CentOS停服问题/README.md)
+  - [如何制作系统启动盘](解决方案/如何制作系统启动盘/README.md)
 - [Linux](Linux/README.md)
   - [apt](Linux/apt/README.md)
   - [git](Linux/git/README.md)

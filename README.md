@@ -6,14 +6,9 @@
 
 操作系统中相关问题的解决方案。
 
-- [CentOS停服问题](解决方案/CentOS停服问题/README.md)
+- [如何应对CentOS停服问题](解决方案/CentOS停服问题/README.md)
 - 操作系统安全加固
-- 如何制作系统启动盘
-- 制作启动U盘工具
-  - [Ventoy](https://www.ventoy.net/cn/index.html)
-  - [Rufus](http://rufus.ie/zh/)
-  - [UltraISO](https://cn.ultraiso.net/)
-  - [dd](https://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html#dd-invocation)
+- [如何制作系统启动盘](解决方案/如何制作系统启动盘/README.md)
 
 ## 基础知识
 
