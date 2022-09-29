@@ -16,8 +16,10 @@
       repo: 'https://gitee.com/huanhi/doc',
       loadSidebar: true,
       subMaxLevel: 3,
-      routerMode: 'history',
-      basePath: 'https://huanhi.gitee.io/doc/',
+      routerMode: 'hash',
+      alias: {
+        '/doc/*.md' : '/*.md',
+      },
       relativePath : false, //启用相对路径
     }
   </script>
