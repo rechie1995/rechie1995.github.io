@@ -31,10 +31,6 @@
 
 - [【1080P重制】操作系统革命 Revolution OS](https://www.bilibili.com/video/BV1iC4y187nT?share_source=copy_web)
 
-## [政策](政策/README.md)
-
-主要归类来自各级政府的相关政策
-
 ---
 
 通过[ISSUE](https://gitee.com/kylinos_fj/doc/issues)向我们反馈问题。
