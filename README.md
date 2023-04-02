@@ -22,6 +22,8 @@
 
 操作系统=对象+API
 
+![库函数API和系统调用的区别](res\库函数API和系统调用的区别.png)
+
 - [2022 南京大学拔尖计划《操作系统：设计与实现》](https://www.bilibili.com/video/BV1Cm4y1d7Ur?share_source=copy_web)
 
 ### POSIX 标准
@@ -39,3 +41,10 @@
 或[PR](https://gitee.com/kylinos_fj/doc/pulls)向我们提交您认为合适的解决方案。
 
 我们将持续更新。
+
+## TODO
+
+- lvm创建
+- POSIX标准
+- 库函数API和系统调用的区别
+- 泛在操作系统

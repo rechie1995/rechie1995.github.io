@@ -39,7 +39,7 @@ LVM利用Linux内核的device-mapper功能来实现存储系统的虚拟化（�
 - 可以在线（online）对逻辑卷（LV）和卷组（VG）进行创建、删除、调整大小等操作。不过LVM上的文件系统也需要重新调整大小，好在某些文件系统（例如ext4）也支持在线操作。
 - 无需重新启动服务，就可以将服务中用到的逻辑卷（LV）在线（online）/动态（live）迁移至别的硬盘上。
 - 允许创建快照，可以保存文件系统的备份，同时使服务的下线时间（downtime）降低到最小。
-- 支持各种设备映射目标（device-mapper targets），包括透明文件系统加密和缓存常用数据（caching of frequently used data）。这将允许你创建一个包含一个或多个磁盘、并用LUKS加密的系统，使用LVM on top 可轻松地管理和调整这些独立的加密卷 （例如. /, /home, /backup等) 并免去开机时多次输入密钥的麻烦。
+- 支持各种设备映射目标（device-mapper targets），包括透明文件系统加密和缓存常用数据（caching of frequently used data）。这将允许你创建一个包含一个或多个磁盘、并用LUKS加密的系统，使用LVM on top 可轻松地管理和调整这些独立的加密卷 (例如. /, /home, /backup等) 并免去开机时多次输入密钥的麻烦。
 
 ## 缺点
 

@@ -36,4 +36,4 @@ CentOS Linux在红帽系的系统中的生态位置 Fedora Linux ➡️ RHEL ➡
 
 CentOS Stream在红帽系的系统中的生态位置 Fedora Linux ➡️ CentOS Stream ➡️ RHEL
 
-![CentOS Stream 生态位](image/centos-stream-eco.jpg)
+![CentOS Stream 生态位](res\centos-stream-eco.jpg)
