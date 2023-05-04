@@ -1,3 +1,0 @@
-1、将nvidia-tool.repo文件拷贝到/etc/yum.repos.d/路径下
-2、执行 yum install nvidia-detect
-3、安装之后执行nvidia-detect命令

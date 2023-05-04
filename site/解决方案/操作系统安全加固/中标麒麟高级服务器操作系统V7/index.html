@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>中标麒麟高级服务器操作系统 V7 安全加固参考 - 欢喜就好资料站</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u4e2d\u6807\u9e92\u9e9f\u9ad8\u7ea7\u670d\u52a1\u5668\u64cd\u4f5c\u7cfb\u7edf V7 \u5b89\u5168\u52a0\u56fa\u53c2\u8003";
+        var mkdocs_page_input_path = "\u89e3\u51b3\u65b9\u6848\\\u64cd\u4f5c\u7cfb\u7edf\u5b89\u5168\u52a0\u56fa\\\u4e2d\u6807\u9e92\u9e9f\u9ad8\u7ea7\u670d\u52a1\u5668\u64cd\u4f5c\u7cfb\u7edfV7\\README.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 欢喜就好资料站
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../C/">C</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../Linux/Linux/">Linux</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../../Python/">Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../../解决方案、">解决方案</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">欢喜就好资料站</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>中标麒麟高级服务器操作系统 V7 安全加固参考</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="v7">中标麒麟高级服务器操作系统 V7 安全加固参考</h1>
+<h2 id="_1">一、密码复杂度设置</h2>
+<p>在中标V7中，使用了pam_pwquality模块取代过去的pam_cracklib模块，用于设置密码复杂度。</p>
+<p>我们可以通过命令<code>authconfig</code>来对密码复杂度进行修改。或者直接修改<code>/etc/security/pwquality.conf</code>配置文件内容。</p>
+<h2 id="_2">二、登录尝试限制</h2>
+<p>通过pam_tally2.so模块可以实现用户多次输入错误密码后锁定当前登录用户，从而避免暴力破解用户密码。通常安全厂商的软件会要求在<code>/etc/pam.d/system-auth</code>配置文件中设置下面参数：</p>
+<pre><code class="language-bash">auth    reuqired    pam_tally2.so   deny=5  onerr=fail  even_deny_root unlook_time=180
+</code></pre>
+<ul>
+<li><strong>deny</strong> 参数设置允许重试次数，连续验证错误超过重试次数时，该登录用户被锁定。</li>
+<li><strong>onerr</strong> 参数设置遇到意外时反馈PAM错误代码。</li>
+<li><strong>even_deny_root</strong> 参数设置root用户认证时同样进行统计。</li>
+<li><strong>unlock_time</strong> 参数设定被锁定用户解锁时间，单位为秒。</li>
+</ul>
+<p>如果希望对SSH等服务生效，您还需要将上面配置内容写入<code>/etc/pam.d/password-auth</code>文件中。</p>
+<h2 id="_3">三、开启系统审计</h2>
+<p>在中标麒麟V7中，默认已经设置开启auditd.service服务，只是并未创建相关的审计规则（默认审计内容与用户登录相关），这个需要根据用户的实际应用情况进行相关的设置操作。</p>
+<h5 id="1">1. 创建审计规则</h5>
+<p>例如我们要创建一个用于审计用户是否修改<code>/etc/passwd</code>文件的规则，可以这样操作:</p>
+<pre><code class="language-bash">auditctl -w /etc/passwd -p wa -k passwd_change
+</code></pre>
+<p>其中参数意义如下：</p>
+<ul>
+<li>-w 后面是需要监控的文件或目录路径</li>
+<li>-p 设置了审计内容，我们目标是监控这个文件是否被修改内容或权限</li>
+<li>-k 代表该规则的关键字，可以方便我们在查询报告信息的时候，了解触发的是什么规则。</li>
+</ul>
+<p>设置完成后，我们可以通过命令 <code>auditctl -l</code> 命令查询当前系统中识别到的审计规则。</p>
+<h5 id="2">2. 设置永久性规则</h5>
+<p>这种设置的规则都是临时性的，如果需要永久性保存规则，需要把规则添加到<code>/etc/audit/rules.d/audit.rules</code>配置文件中。</p>
+<h5 id="3">3. 查看审计结果</h5>
+<p>我们可以通过命令<code>aureport</code>命令来查询系统的审计结构，例如我们根据关键字查询审计情况可以直接输入<code>aureport -k</code>命令。</p>
+<p>如果我们需要查看详细的审计日志记录，则可以使用<code>ausearch</code>命令进行查询，例如我们查询关键字passwd相关的信息可以执行<code>ausearch -k passwd</code>命令</p>
+<h5 id="4">4. 删除审计规则</h5>
+<p>删除审计结果的操作只需要修改创建审计规则的参数，将-w修改为-W即可，例如删除之前创建的审计规则命令如下：</p>
+<pre><code class="language-bash">auditctl -W /etc/passwd -p wa -k passwd_change
+</code></pre>
+<h2 id="_4">四、设置自动超时</h2>
+<p>系统登录后超时自动退出可以通过在/etc/profile.d文件夹中创建一个配置文件用于设置TMOUT变量来实现，具体命令如下：</p>
+<pre><code class="language-bash">echo &quot;export TMOUT=300&quot; &gt; /etc/profile.d/tmout.sh
+</code></pre>
+<p>需要注意，该设置完成后，需要注销重新登录或重启操作系统才能生效。</p>
+<h2 id="root">五、限制root用户直接登录</h2>
+<p>为了增强系统的安全稳定性，我们通常建议通过SSH连接到服务器上时，限制root用户直接登录，这样可以有效的防范针对系统用户的字典密码暴力破解。</p>
+<p>限制root用户直接登录需要修改OpenSSH服务的配置文件，<code>/etc/ssh/sshd_config</code>，找到该配置中的关键字PermitRootLogin，将该参数设置为no。默认情况下配置文件中该参数处于注释状态，需要手动取消注释并把注释中的yes替换为no，然后重启sshd服务使配置文件生效，可以通过命令<code>systemctl restart sshd.service</code> 命令进行重启操作。</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

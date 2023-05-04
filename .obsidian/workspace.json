@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "c85b291f0d15a14a",
+    "type": "split",
+    "children": [
+      {
+        "id": "3997ced570322acb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cc91e65593ef45ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_sidebar.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6099d847468c82ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "3150883969d17463",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "238d3d554f94778b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "50cd0eaee847d234",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "657ee0492f7ec475",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8ae209e956e171a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "36799978a74edf26",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8e6de8df35ddf90a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_sidebar.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "188a05456a6302be",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_sidebar.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7351026b8d223f28",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1f8c23780ff547ff",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_sidebar.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "238d3d554f94778b",
+  "lastOpenFiles": [
+    "site/解决方案/操作系统安全加固/银河麒麟高级服务器操作系统V10/index.html",
+    "site/解决方案/操作系统安全加固/中标麒麟高级服务器操作系统V7/index.html",
+    "site/解决方案/操作系统安全加固/银河麒麟高级服务器操作系统V10",
+    "site/解决方案/操作系统安全加固/中标麒麟高级服务器操作系统V7",
+    "site/解决方案/操作系统安全加固",
+    "site/解决方案/如何禁止使用ping命令/index.html",
+    "site/解决方案/如何禁止使用ping命令",
+    "site/解决方案/如何安装操作系统/系统需求/index.html",
+    "site/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统V10_SP1_2203_X86版本/index.html",
+    "site/解决方案/如何安装操作系统/安装过程/index.html",
+    "site/解决方案/如何安装操作系统/系统需求",
+    "site/css/fonts/fontawesome-webfont.svg",
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/9.png",
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/8.png",
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/7.png",
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/6.png",
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/5.png",
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/4.png",
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/3.png",
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/2.png",
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/13.png",
+    "docs/解决方案/操作系统安全加固/银河麒麟高级服务器操作系统V10/README.md",
+    "docs/解决方案/操作系统安全加固/中标麒麟高级服务器操作系统V7/README.md",
+    "docs/解决方案/如何禁止使用ping命令/README.md",
+    "docs/解决方案/如何安装操作系统/系统需求.md",
+    "docs/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统V10_SP1_2203_X86版本.md",
+    "docs/解决方案/如何安装操作系统/安装过程.md",
+    "docs/解决方案/如何安装操作系统/README.md",
+    "docs/解决方案/如何制作系统启动盘/README.md",
+    "docs/解决方案/CentOS停服问题/README.md",
+    "docs/README.md",
+    "docs/Python/改善Python程序的91个建议.md",
+    "docs/Python/virtualenv.md",
+    "docs/Python/python编程规范.md",
+    "docs/Linux/packing-system/apt/README.md",
+    "docs/Linux/kernel/VFS/README.md",
+    "docs/Linux/kernel/IPC/README.md",
+    "docs/Linux/packing-system/README.md",
+    "docs/Linux/LVM/README.md",
+    "docs/Linux/kernel/README.md",
+    "docs/Linux/git/README.md",
+    "docs/Linux/Linux系统启动过程.md",
+    "docs/Linux/Linux.md",
+    "docs/Linux/CentOS.md",
+    "docs/C/README.md",
+    "Linux/Linux.md",
+    "未命名.canvas"
+  ]
+}

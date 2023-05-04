@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Git - 欢喜就好资料站</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Git";
+        var mkdocs_page_input_path = "Linux\\git\\README.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> 欢喜就好资料站
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../C/">C</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Linux/">Linux</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../Python/">Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../解决方案、">解决方案</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">欢喜就好资料站</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>Git</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="git">Git</h1>
+<h2 id="git_1">Git 是什么？</h2>
+<p>Git是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的分布式版本控制系统。</p>
+<p>与常用的版本控制工具CVS，Subversion等不同，它采用了分布式版本库的方式，不必服务器端软件支持，使源代码的发布和交流极其方便。Git的速度很快，这对于诸如Linux Kernel 这样的大项目来说自然很重要。Git最为出色的是它的合并跟踪能力。</p>
+<h2 id="git_2">Git 的安装</h2>
+<pre><code class="language-bash">sudo apt install git
+</code></pre>
+<h2 id="git_3">初次运行 Git 前的配置</h2>
+<p>在新的系统上，我们一般都需要先配置下自己的Git工作环境。配置工作只需一次，以后升级时还会沿用现在的配置。当然，如果需要，你随时可以使用相同的命令修改已有的配置。</p>
+<p>Git 提供了一个叫做<code>git config</code>的工具，专门用来配置或读取相应的工作环境变量。而正是由这些环境变量，决定了Git在各个环节的具体工作方式和行为。这些变量可以存放在以下三个不同的地方：</p>
+<blockquote>
+<ul>
+<li><code>/etc/gitconfig</code>文件: 系统中对所有用户都普遍适用的配置。若使用<code>git config</code>时用<code>--system</code>选项，读写的就是这个文件。</li>
+<li><code>~/.gitconfig</code>文件: 用户目录下的配置文件只适用于该用户。若使用<code>git config</code>时用<code>--global</code>选项，读写的就是这个文件。</li>
+<li>当前仓库的git目录中的配置文件(也就是工作目录中的<code>.git/config</code>文件): 这里的配置仅仅针对当前仓库有效。每一个级别的配置都会覆盖上层的相同配置，所以<code>.git/config</code>里的配置会覆盖<code>/etc/gitconfig</code>中的同名变量。</li>
+</ul>
+</blockquote>
+<h3 id="_1">用户信息配置</h3>
+<p>第一个要配置的是你个人的用户名称和电子邮件地址。</p>
+<p>这两条配置很重要，每次Git提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录:</p>
+<pre><code class="language-bash">git config --global user.name &quot;rechie&quot;
+git config --global user.name &quot;502117806@qq.com&quot;
+</code></pre>
+<h3 id="_2">文本编辑器配置</h3>
+<pre><code class="language-bash">git config --global core.editor vim
+</code></pre>
+<h3 id="_3">差异分析工具</h3>
+<pre><code class="language-bash">git config --global merge.tool vimdiff
+</code></pre>
+<h3 id="_4">查看配置信息</h3>
+<pre><code class="language-bash">git config --list
+</code></pre>
+<blockquote>
+<p>https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%8E%B7%E5%8F%96-Git-%E4%BB%93%E5%BA%93</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

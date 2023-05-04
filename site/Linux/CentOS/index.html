@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>CentOS - 欢喜就好资料站</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CentOS";
+        var mkdocs_page_input_path = "Linux\\CentOS.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> 欢喜就好资料站
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../C/">C</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Linux/">Linux</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../Python/">Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../解决方案、">解决方案</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">欢喜就好资料站</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>CentOS</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="centos">CentOS</h1>
+<h2 id="centos_1">什么是CentOS</h2>
+<p>CentOS是免费的、开源的、可以重新分发的开源操作系统，CentOS（Community Enterprise Operating System，中文意思是社区企业操作系统）是Linux发行版之一。</p>
+<p>CentOS Linux发行版是一个稳定的，可预测的，可管理的和可复现的平台，源于Red Hat Enterprise Linux（RHEL）依照开放源码（大部分是GPL开源协议）规定释出的源码所编译而成。</p>
+<p>自2004年3月以来，CentOS Linux一直是社区驱动的开源项目，旨在与RHEL在功能上兼容。</p>
+<h2 id="_1">系统版本分类</h2>
+<p>CentOS主要分为两个主要版本，CentOS Linux和CentOS Stream版。</p>
+<ol>
+<li>Linux版每两年发行一次，每个版本的系统会提供10年的安全维护支持。</li>
+<li>Stream版为滚动更新版，意味着没有固定版本号，是动态更新具体的内容。</li>
+</ol>
+<h3 id="_2">产品生命周期区别</h3>
+<p>CentOS Project 已经将重点从CentOS Linux转移到CentOS Stream。以下是CentOS各个版本的预期生命周期终止日期（EOL）</p>
+<ul>
+<li>CentOS Linux 7 EOL : 2024-06-30</li>
+<li>CentOS Linux 8 EOL : 2021-12-31</li>
+<li>CentOS Stream 8 EOL : 2024-05-31</li>
+<li>CentOS Stream 9 EOL : 预计2027年，取决与RHEL 9 的EOL</li>
+</ul>
+<h3 id="_3">版本生态位置（上游与下游）</h3>
+<h4 id="centos-linuxcentosrhelrhel">CentOS Linux版为传统CentOS系统，系统的基本源代码由RHEL对应版本的开源代码提供，是RHEL的下游</h4>
+<p>当RHEL更新后CentOS Linux根据RHEL更新的内容进行更新并修复其中可能的漏洞等。版本略落后于RHEL，更新新特性速度较RHEL慢。提供与CentOS Linux版以前一样的安全服务支持和稳定的服务器操作系统，但CentOS Linux 8服务支持时间被大幅减少，CentOS Linux7的维护时间暂时没有改变，且官方维护团队的重心已经转移到Stream版本。</p>
+<p>CentOS Linux在红帽系的系统中的生态位置 Fedora Linux ➡️ RHEL ➡️CentOS Linux（或者同级）</p>
+<h4 id="centos-streamrhelrhelrhelrhelrhel">CentOS Stream版则为滚动更新版，系统的基本源代码也由RHEL对应版本的开源代码提供。但代码更加激进，是合并进RHEL前的一个试验场，比RHEL更新新特性更快。等到相关新代码成熟后由RHEL合并，是RHEL的上游</h4>
+<p>CentOS Stream在红帽系的系统中的生态位置 Fedora Linux ➡️ CentOS Stream ➡️ RHEL</p>
+<p><img alt="CentOS Stream 生态位" src="../../res/centos-stream-eco.jpg" /></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

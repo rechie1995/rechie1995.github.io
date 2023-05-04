@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>改善Python程序的91个建议 - 欢喜就好资料站</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u6539\u5584Python\u7a0b\u5e8f\u768491\u4e2a\u5efa\u8bae";
+        var mkdocs_page_input_path = "Python\\\u6539\u5584Python\u7a0b\u5e8f\u768491\u4e2a\u5efa\u8bae.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> 欢喜就好资料站
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../C/">C</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Linux/Linux/">Linux</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../">Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../解决方案、">解决方案</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">欢喜就好资料站</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>改善Python程序的91个建议</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="python91">改善Python程序的91个建议</h1>
+<h2 id="_1">第一章：引论</h2>
+<p><strong>建议1</strong>：理解Pythonic概念——详见Python的《Python之禅》</p>
+<p><strong>建议2</strong>：编写Pythonic代码</p>
+<ol>
+<li>避免不规范代码，比如只用大小写区分变量、使用容易混淆的变量名、害怕过长变量名等。有时候长的变量名会使代码更加具有可读性。</li>
+<li>深入学习Python相关知识，比如语言特性、库特性等，比如Python演变过程等。深入学习一两个业内公认的Pythonic的代码库，比如Flask等。</li>
+</ol>
+<p><strong>建议3</strong>：理解Python与C的不同之处，比如缩进与{}，单引号双引号，三元操作符，Switch—Case语句等。</p>
+<p><strong>建议4</strong>：在代码中适当添加注释</p>
+<p><strong>建议5</strong>：适当添加空行使代码布局更加合理</p>
+<p><strong>建议6</strong>：编写函数的4个原则</p>
+<ol>
+<li>函数设计要尽量短小，嵌套层次不宜过深</li>
+<li>函数声明应该做到合理、简单、易用</li>
+<li>函数参数设计应该考虑向下兼容</li>
+<li>一个函数只做一件事，尽量保证函数粒度的一致性</li>
+</ol>
+<p><strong>建议7</strong>：将常量集中在一个文件，且常量名尽量使用全大写字母</p>
+<h2 id="_2">第二章：编程惯用法</h2>
+<p><strong>建议8</strong>：利用assert语句来发现问题，但要注意，断言assert会影响效率</p>
+<p><strong>建议9</strong>：数据交换值时不推荐使用临时变量，而是直接a, b = b, a</p>
+<p><strong>建议10</strong>：充分利用惰性计算(Lazy evaluation)的特性，从而避免不必要的计算</p>
+<p><strong>建议11</strong>：理解枚举替代实现的缺陷（最新版Python中已经加入了枚举特性）</p>
+<p><strong>建议12</strong>：不推荐使用type来进行类型检查，因为有些时候type的结果并不一定可靠。如果有需求，建议使用isinstance函数来代替</p>
+<p><strong>建议13</strong>：尽量将变量转化为浮点类型后再做除法（Python3以后不用考虑）</p>
+<p><strong>建议14</strong>：警惕eval()函数的安全漏洞，有点类似SQL注入</p>
+<p><strong>建议15</strong>：使用enumerate()同时获取序列迭代的索引和值</p>
+<p><strong>建议16</strong>：分清==和is的适用场景，特别是在比较字符串等不可变类型变量时</p>
+<p><strong>建议17</strong>：尽量使用Unicode。特别是Python2中</p>
+<p><strong>建议18</strong>：构建合理的包层次来管理Module</p>
+<h2 id="_3">第三章：基础用法</h2>
+<p><strong>建议19</strong>：有节制的使用from……import语句，防止污染命名空间</p>
+<p><strong>建议20</strong>：优先使用absolute import来导入模块（Python3中已经移除了relative import）</p>
+<p><strong>建议21</strong>：i+=1不等于++i，在Python中，++i前边仅表示正，不表示操作</p>
+<p><strong>建议22</strong>：习惯使用with自动关闭资源，特别是在文件读写中</p>
+<p><strong>建议23</strong>：使用else子句简化循环（异常处理）</p>
+<p><strong>建议24</strong>：遵循异常处理的几点基本原则：</p>
+<ol>
+<li>注意异常的力度，try块中尽量少写代码</li>
+<li>谨慎使用单独的except语句，或except Exception语句，而是定位到具体异常</li>
+<li>注意异常捕获的顺序，在合适的层次处理异常</li>
+<li>使用更加友好的异常信息，遵守异常参数的规范</li>
+</ol>
+<p><strong>建议25</strong>：避免finally中可能发生的陷阱</p>
+<p><strong>建议26</strong>：深入理解None，正确判断对象是否为空。Python中下列数据会判断为空：</p>
+<ul>
+<li>常量None</li>
+<li>常量False</li>
+<li>任何形式的数值类型零，如0,、0L、0.0、0j</li>
+<li>空的序列，如‘’，()，[]</li>
+<li>空的字典，{}</li>
+<li>当用户定义的类中定义了nonzero()方法和len()方法，并且该方法返回整数0或者布尔值False的时候</li>
+</ul>
+<p><strong>建议27</strong>：连接字符串应优先使用join函数，而不是+操作</p>
+<p><strong>建议28</strong>：格式化字符串时尽量使用.format函数，而不是%形式</p>
+<p><strong>建议29</strong>：区别对待可变对象和不可变对象，特别是作为函数参数时</p>
+<p><strong>建议30</strong>：[]，{}和()：一致的容器初始化形式。使用列表解析可以使代码更清晰，同时效率更高</p>
+<p><strong>建议31</strong>：函数传参数，既不是传值也不是引用，而是传对象或者说对象的引用</p>
+<p><strong>建议32</strong>：警惕默认参数潜在的问题，特别是当默认参数为可变对象时</p>
+<p><strong>建议33</strong>：函数中慎用变长参数*args和**kargs</p>
+<ol>
+<li>这种使用太灵活，从而是得函数签名不够清晰，可读性较差</li>
+<li>如果因为函数参数过多而是用边长参数简化函数定义，那么一般该函数可以重构</li>
+</ol>
+<p><strong>建议34</strong>：深入理解str()和repr()的区别</p>
+<ol>
+<li>两者之间的目标不同：str主要面向客户，其目的是可读性，返回形式为用户友好性和可读性都比较高的字符串形式；而repr是面向Python解释器或者说Python开发人员，其目的是准确性，其返回值表示Python解释器内部的定义</li>
+<li>在解释器中直接输入变量，默认调用repr函数，而print(var)默认调用str函数</li>
+<li>repr函数的返回值一般可以用eval函数来还原对象</li>
+<li>两者分别调用对象内建函数__str__()和__repr__()</li>
+</ol>
+<p><strong>建议35</strong>：分清静态方法staticmethod和类方法classmethod的使用场景</p>
+<h2 id="_4">第四章：库</h2>
+<p><strong>建议36</strong>：掌握字符串的基本用法</p>
+<p><strong>建议37</strong>：按需选择sort()和sorted()函数</p>
+<ul>
+<li>sort()是列表在就地进行排序，所以不能排序元组等不可变类型</li>
+<li>sorted()可以排序任意的可迭代类型，同事不改变原变量本身</li>
+</ul>
+<p><strong>建议38</strong>：使用copy模块深拷贝对象，区分浅拷贝(shallow copy)和深拷贝(deep copy)</p>
+<p><strong>建议39</strong>：使用Counter进行技术统计，Counter是字典类的子类，在collections模块中</p>
+<p><strong>建议40</strong>：深入掌握ConfigParser</p>
+<p><strong>建议41</strong>：使用argparse模块处理命令行参数</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

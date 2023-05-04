@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>用virtualenv建立Python独立开发环境 - 欢喜就好资料站</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u7528virtualenv\u5efa\u7acbPython\u72ec\u7acb\u5f00\u53d1\u73af\u5883";
+        var mkdocs_page_input_path = "Python\\virtualenv.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> 欢喜就好资料站
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../C/">C</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Linux/Linux/">Linux</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../">Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../解决方案、">解决方案</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">欢喜就好资料站</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>用virtualenv建立Python独立开发环境</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="virtualenvpython">用virtualenv建立Python独立开发环境</h1>
+<p>&emsp;&emsp;不同的人喜欢用不同的方式建立自己的开发环境，所以需要有一个工具来提供一个独立的开发环境。在Python的开发环境中最常使用的是virtualenv包。virtualenv是一个来创造独立的Python环境的包。<br />
+&emsp;&emsp;简单得说，你将为每个项目安装所有需要的软件包到它们各自独立的环境中。  </p>
+<h2 id="virtualenv">安装virtualenv</h2>
+<p>安装virtualenv很简单<br />
+<code>pip install virtualenv</code>  </p>
+<h2 id="virtualenv_1">使用virtualenv</h2>
+<p>第一步，创建目录：</p>
+<pre><code>$ mkdir myproject  
+$ cd myproject/
+</code></pre>
+<p>第二步，创建一个独立的Python运行环境，命名为<code>venv</code>:  </p>
+<pre><code>$ virtualenv --no-site-packages venv
+</code></pre>
+<p>命令<code>virtualenv</code>就可以创建一个独立的Python运行环境，我们还加上了参数<code>--no-site-packages</code>，这样，已经安装到系统Python环境中的所有第三方包都不会复制过来，我们就得到了一个不带任何第三方包的Python运行环境。  </p>
+<p>第三步，进入<code>venv</code>环境</p>
+<pre><code>$ source venv/bin/activate
+</code></pre>
+<p>会注意到命令提示符变了，有个<code>(venv)</code>前缀，表示当前环境是一个名为<code>vnev</code>的Python环境。<br />
+后续正常安装各种第三方包，并运行Python命令。<br />
+在<code>venv</code>环境下，用<code>pip</code>安装的包都被安装到<code>venv</code>这个环境下，系统Python环境不受任何影响。也就是说，<code>venv</code>环境是专门针对<code>myproject</code>这个应用创建的。  </p>
+<p>第四步，退出<code>venv</code>环境</p>
+<pre><code>$ deactivate
+</code></pre>
+<p>此时就回到了正常的环境，现在pip和Python都是在系统Python环境下执行。</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

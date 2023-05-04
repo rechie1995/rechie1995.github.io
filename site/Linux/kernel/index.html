@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>什么是Linux内核 - 欢喜就好资料站</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u4ec0\u4e48\u662fLinux\u5185\u6838";
+        var mkdocs_page_input_path = "Linux\\kernel\\README.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> 欢喜就好资料站
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../C/">C</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Linux/">Linux</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../Python/">Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../解决方案、">解决方案</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">欢喜就好资料站</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>什么是Linux内核</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="linux">什么是Linux内核</h1>
+<h2 id="linux_1">Linux内核概述</h2>
+<p>Linux内核是Linux操作系统的主要组件，也是计算机硬件与其进程之间的核心接口。它负责两者之间的通信，还要尽可能高效地管理资源。</p>
+<p>之所以称为内核，是因为它在操作系统中就像果实硬壳中的种子一样，并且控制着硬件（无论是手机、笔记本电脑、服务器，还是任何其他类型的计算机）的所有主要功能。</p>
+<p>内核包安装在<code>/usr/lib/modules/</code>路径下，并随后用于生成储存在<code>/boot/</code>中的可执行镜像。为了能够启动到内核，需要正确配置启动加载器。</p>
+<h2 id="_1">内核的作用是什么？</h2>
+<p>内核有四项工作：
+- 内存管理：追踪记录有多少内存存储了什么以及存储在哪里
+- 进程管理：确定哪些进程可以使用CPU、何时使用以及持续多长时间
+- 设备驱动程序：充当硬件与进程之间的调解程序/解释程序
+- 系统调用和安全防护：从流程接受服务请求</p>
+<h2 id="_2">内核的整体架构和子系统</h2>
+<p>内核提出了5个子系统，分别负责如下的功能：
+- Process Scheduler，也称作进程管理、进程调度。负责管理CPU资源，以便让各个进程可以用尽量公平的方式访问CPU。
+- Memory Manager，内存管理。负责管理内存资源，以便让各个进程可以安全地共享机器的内存资源。另外，内存管理会提供虚拟内存的机制，该机制可以让进程使用多于系统可用的内存，不用的内存会通过文件系统保存在外部非易失存储器中，需要使用的时候，再取回到内存中。
+- VFS(Virtual File System)，虚拟文件系统。Linux内核将不同功能的外部设备，例如Disk设备(硬盘、磁盘、NAND Flash、Nor Flash等)、输入输出设备、显示设备等等，抽象为可以通过统一的文件操作接口(open、close、read、write等)来访问。这就是Linux系统“一切皆是文件”的体现。
+- Network，网络子系统。负责管理系统的网络设备，并实现多种多样的网络标准。
+- IPC，进程间通信。IPC不管理任何的硬件，它主要负责Linux系统中进程之间的通信。</p>
+<h2 id="_3">内核源代码的目录结构</h2>
+<ul>
+<li>include/ ---- 内核头文件，需要提供给外部模块（例如用户空间代码）使用。</li>
+<li>kernel/ ---- Linux内核的核心代码，包含了进程调度子系统，以及和进程调度相关的模块。</li>
+<li>mm/ ---- 内存管理子系统。</li>
+<li>fs/ ---- VFS子系统。</li>
+<li>net/ ---- 不包括网络设备驱动的网络子系统。</li>
+<li>ipc/ ---- IPC（进程间通信）子系统。</li>
+<li>arch// ---- 体系结构相关的代码，例如arm, x86等等。</li>
+<li>arch//mach- ---- 具体的machine/board相关的代码。</li>
+<li>arch//include/asm ---- 体系结构相关的头文件。</li>
+<li>arch//boot/dts ---- 设备树（Device Tree）文件。</li>
+<li>init/ ---- Linux系统启动初始化相关的代码。</li>
+<li>block/ ---- 提供块设备的层次。</li>
+<li>sound/ ---- 音频相关的驱动及子系统，可以看作“音频子系统”。</li>
+<li>drivers/ ---- 设备驱动（在Linux kernel 3.10中，设备驱动占了49.4的代码量）。</li>
+<li>lib/ ---- 实现需要在内核中使用的库函数，例如CRC、FIFO、list、MD5等。</li>
+<li>crypto/ ----- 加密、解密相关的库函数。</li>
+<li>security/ ---- 提供安全特性（SELinux）。</li>
+<li>virt/ ---- 提供虚拟机技术（KVM等）的支持。</li>
+<li>usr/ ---- 用于生成initramfs的代码。</li>
+<li>firmware/ ---- 保存用于驱动第三方设备的固件。</li>
+<li>samples/ ---- 一些示例代码。</li>
+<li>tools/ ---- 一些常用工具，如性能剖析、自测试等。</li>
+<li>Kconfig, Kbuild, Makefile, scripts/ ---- 用于内核编译的配置文件、脚本等。</li>
+<li>COPYING ---- 版权声明。</li>
+<li>MAINTAINERS ----维护者名单。</li>
+<li>CREDITS ---- Linux主要的贡献者名单。</li>
+<li>REPORTING-BUGS ---- Bug上报的指南。</li>
+<li>Documentation, README ---- 帮助、说明文档。</li>
+</ul>
+<h2 id="_4">内核配置</h2>
+<ul>
+<li><code>make config</code>       纯文本界面。</li>
+<li><code>make menuconfig</code>   基于文本的彩色菜单、选项列表和对话框。</li>
+<li><code>make nconfig</code>      增强的基于文本的彩色菜单。</li>
+<li><code>make xconfig</code>      基于Qt的配置工具。</li>
+<li><code>make gconfig</code>      基于GTK+的配置工具。</li>
+<li><code>make oldconfig</code>    基于现有的 ./.config 文件选择所有选项，并询问新配置选项。</li>
+<li><code>make olddefconfig</code> 类似上一个，但不询问直接将新选项设置为默认值。</li>
+<li><code>make defconfig</code>    根据体系架构，使用arch/$arch/defconfig或arch/$arch/configs/${PLATFORM}_defconfig中的默认选项值创建./.config文件。</li>
+<li><code>make ${PLATFORM}_defconfig</code> 使用arch/$arch/configs/${PLATFORM}_defconfig中的默认选项值创建一个./.config文件。用<code>make help</code>来获取您体系架构中所有可用平台的列表。</li>
+<li><code>make allyesconfig</code> 通过尽可能将选项值设置为“y”，创建一个./.config文件。</li>
+<li><code>make allmodconfig</code> 通过尽可能将选项值设置为“m”，创建一个./.config文件。</li>
+<li><code>make allnoconfig</code>  通过尽可能将选项值设置为“n”，创建一个./.config文件。</li>
+<li><code>make randconfig</code>   通过随机设置选项值来创建./.config文件。</li>
+<li><code>make localmodconfig</code> 基于当前配置和加载的模块（lsmod）创建配置。禁用已加载的模块不需要的任何模块选项。</li>
+<li><code>make localyesconfig</code> 与localmodconfig类似，只是它会将所有模块选项转换为内置（=y）。你可以同时通过LMC_KEEP保留模块。</li>
+<li><code>make kvm_guest.config</code> 为kvm客户机内核支持启用其他选项。</li>
+<li><code>make xen.config</code>   为xen dom0客户机内核支持启用其他选项。</li>
+<li><code>make tinyconfig</code>   配置尽可能小的内核。</li>
+</ul>
+<blockquote>
+<p><a href="https://docs.kernel.org/index.html">The Linux Kernel documentation</a></p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

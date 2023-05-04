@@ -1,0 +1,8 @@
+site_name: 欢喜就好资料站
+nav:
+- 主页: 'README.md'
+- C: './C/README.md'
+- Linux: './Linux/Linux.md'
+- Python: './Python/'
+- 解决方案: './解决方案、'
+theme: readthedocs
