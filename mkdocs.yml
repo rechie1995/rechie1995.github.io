@@ -4,5 +4,5 @@ nav:
 - C: './C/README.md'
 - Linux: './Linux/Linux.md'
 - Python: './Python/'
-- 解决方案: './解决方案、'
+- 解决方案: './解决方案/解决方案目录.md'
 theme: readthedocs

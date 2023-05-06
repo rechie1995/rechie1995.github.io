@@ -16,7 +16,7 @@ CentOS Stream 是一个滚动升级版本，不再是Red Hat Enterprise Linux的
 
 ## 麒麟软件 CentOS 停服应对解决方案
 
-- [产品解决方案](https://www.kylinos.cn/solution/product/17.html)
+- [产品解决方案](https://x2kylin.kylinos.cn/singleDocument/18/10)
 - [技术文档下载](https://www.kylinos.cn/support/document/53.html)
 
 ## 统信软件 CentOS 停服应对解决方案

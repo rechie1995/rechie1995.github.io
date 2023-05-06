@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3997ced570322acb",
+        "id": "f5c69bdfb9c09775",
         "type": "tabs",
         "children": [
           {
-            "id": "cc91e65593ef45ee",
+            "id": "1a3554c5b4bfee54",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_sidebar.md",
+                "file": "docs/Solution/解决方案目录.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,8 +85,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_sidebar.md",
-                "collapseAll": false,
+                "file": "docs/Solution/解决方案目录.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_sidebar.md",
+                "file": "docs/Solution/解决方案目录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,11 +125,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_sidebar.md"
+                "file": "docs/Solution/解决方案目录.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -146,54 +147,53 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "238d3d554f94778b",
+  "active": "1a3554c5b4bfee54",
   "lastOpenFiles": [
+    "docs/README.md",
+    "docs/Solution/如何禁止使用ping命令.md",
+    "docs/Solution/LVM-create.md",
+    "docs/Solution/install-Chrome.md",
+    "docs/Solution/CentOS停服解决方案.md",
+    "docs/Solution/解决方案目录.md",
+    "docs/res/Pasted image 20230505222159.png",
+    "docs/res/Pasted image 20230505221915.png",
+    "docs/res/Pasted image 20230505221643.png",
+    "docs/Kylinsoft/银河麒麟桌面操作系统兼容适配.md",
+    "docs/Kylinsoft/如何迁移到银河麒麟桌面操作系统.md",
+    "docs/Solution/如何制作系统启动盘/README.md",
+    "().md",
+    "未命名.canvas",
+    "docs/res/迁移流程.png",
+    "docs/Kylinsoft/银河麒麟桌面操作系统.md",
+    "docs/Kylinsoft/星光麒麟操作系统.md",
+    "docs/Kylinsoft/银河麒麟高级服务器操作系统.md",
+    "docs/Linux/CentOS.md",
+    "docs/Linux/Linux.md",
+    "docs/Linux/Linux-LVM.md",
+    "docs/Linux/Linux系统启动过程.md",
+    "docs/C/README.md",
+    "docs/Solution/如何安装操作系统/README.md",
+    "docs/操作系统/操作系统概述.md",
+    "docs/操作系统/泛在操作系统.md",
+    "docs/操作系统",
+    "docs/Linux/git/README.md",
+    "docs/Kylinsoft",
+    "docs/新建文件夹",
+    "未命名",
+    "docs/Linux/kernel/Linux-Kernel.md",
+    "docs/Python/改善Python程序的91个建议.md",
+    "docs/Python/python编程规范.md",
+    "res",
     "site/解决方案/操作系统安全加固/银河麒麟高级服务器操作系统V10/index.html",
     "site/解决方案/操作系统安全加固/中标麒麟高级服务器操作系统V7/index.html",
     "site/解决方案/操作系统安全加固/银河麒麟高级服务器操作系统V10",
     "site/解决方案/操作系统安全加固/中标麒麟高级服务器操作系统V7",
     "site/解决方案/操作系统安全加固",
-    "site/解决方案/如何禁止使用ping命令/index.html",
-    "site/解决方案/如何禁止使用ping命令",
-    "site/解决方案/如何安装操作系统/系统需求/index.html",
-    "site/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统V10_SP1_2203_X86版本/index.html",
-    "site/解决方案/如何安装操作系统/安装过程/index.html",
-    "site/解决方案/如何安装操作系统/系统需求",
     "site/css/fonts/fontawesome-webfont.svg",
     "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/9.png",
     "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/8.png",
     "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/7.png",
     "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/6.png",
-    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/5.png",
-    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/4.png",
-    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/3.png",
-    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/2.png",
-    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/13.png",
-    "docs/解决方案/操作系统安全加固/银河麒麟高级服务器操作系统V10/README.md",
-    "docs/解决方案/操作系统安全加固/中标麒麟高级服务器操作系统V7/README.md",
-    "docs/解决方案/如何禁止使用ping命令/README.md",
-    "docs/解决方案/如何安装操作系统/系统需求.md",
-    "docs/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统V10_SP1_2203_X86版本.md",
-    "docs/解决方案/如何安装操作系统/安装过程.md",
-    "docs/解决方案/如何安装操作系统/README.md",
-    "docs/解决方案/如何制作系统启动盘/README.md",
-    "docs/解决方案/CentOS停服问题/README.md",
-    "docs/README.md",
-    "docs/Python/改善Python程序的91个建议.md",
-    "docs/Python/virtualenv.md",
-    "docs/Python/python编程规范.md",
-    "docs/Linux/packing-system/apt/README.md",
-    "docs/Linux/kernel/VFS/README.md",
-    "docs/Linux/kernel/IPC/README.md",
-    "docs/Linux/packing-system/README.md",
-    "docs/Linux/LVM/README.md",
-    "docs/Linux/kernel/README.md",
-    "docs/Linux/git/README.md",
-    "docs/Linux/Linux系统启动过程.md",
-    "docs/Linux/Linux.md",
-    "docs/Linux/CentOS.md",
-    "docs/C/README.md",
-    "Linux/Linux.md",
-    "未命名.canvas"
+    "site/res/解决方案/如何安装操作系统/安装银河麒麟桌面操作系统/5.png"
   ]
 }

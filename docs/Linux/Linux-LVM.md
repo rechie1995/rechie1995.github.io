@@ -28,7 +28,7 @@ LVM利用Linux内核的device-mapper功能来实现存储系统的虚拟化（�
 
 ### LVM原理图如下
 
-![逻辑卷管理器原理图](../../res/Linux/LVM/逻辑卷管理器原理图.png)
+![逻辑卷管理器原理图](docs/res/Linux/LVM/逻辑卷管理器原理图.png)
 
 ## 优点
 
